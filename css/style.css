@@ -1,0 +1,26 @@
+.a{
+	color: violet;
+	height: 1000px;
+	width: 1000px;
+	margin:20px;
+	font-family: "Tahoma", serif;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+	background: #f7ffaf url('../image/modern-abstract-background_1048-1003.jpg') fixed;
+	background-size: cover;
+
+}
+
+#b{
+	color: #9216f7;
+	height: 100px;
+	width: 100px;
+	margin:20px;
+	background-color: #f9d493
+}
+.the_a{
+	text-decoration: none;
+}

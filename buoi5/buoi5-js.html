@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	Số a: <input type="text" id="so_a" placeholder="Nhập số a">
+	<br>
+	<br>
+	Số b: <input type="text" id="so_b" placeholder="Nhập số b">
+	<br>
+	<br>
+	phép tính: <input type="text" id="pheptinh" placeholder="nhập phép tính + - * /">
+	<br>
+	<br>
+	<button type="button"  id="btnClick" onclick="tinhtoan()">Click me!</button>
+	<br>
+	<br>
+	<input type="text" id="ketqua" readonly>
+
+	<script type="text/javascript">
+
+		//document.write('Hello world !')
+		/*
+			chú thích nhiều dòng
+		*/
+
+		// var name = document.getElementById('txtName').value;
+		// console.log(name);
+
+		function tinhtoan(){
+			var a = document.getElementById('so_a');
+			var b = document.getElementById('so_b');
+			var pt = document.getElementById('pheptinh');
+
+			so_a = parseFloat(a.value);
+			so_b = parseFloat(b.value);
+			var input_ketqua =  document.getElementById('ketqua');
+			var ketqua = 0;
+
+			if(a.value == "" ){
+				alert('Vui lòng nhập số a');
+				a.focus();
+				return false;
+
+			}
+			if(isNaN(so_a)){
+				alert('Vui lòng nhập số')
+				a.focus();
+				return false;
+			}
+
+			if(pt.value == "+"){
+				ketqua = so_a + so_b;
+			}
+			else if(pt.value == "-"){
+				ketqua = so_a - so_b;
+			}
+			else if(pt.value == "*"){
+				ketqua = so_a * so_b;
+			}
+			else{
+				if(so_b != 0){
+					ketqua = so_a/so_b;
+				}
+				else{
+					alert('số b phải khác 0')
+				}
+				
+			}
+			
+			input_ketqua.value = ketqua;
+		}
+
+
+	
+
+	</script>
+</body>
+</html>

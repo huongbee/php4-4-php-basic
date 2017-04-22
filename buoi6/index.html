@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery</title>
+	<link rel="stylesheet" href="">
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			// $("#clickme").click(function(){
+			// 	$(".test").slideUp(500)
+			// })
+			for(var i=1;i<=306;i++){
+				$(".banco").append('<div class="oco"></div>');
+			}
+
+			$('.banco').css("width","400px");
+			$('.oco').css('width',"20px")
+			$('.oco').css('height',"20px")
+			$('.oco').css('border',"1px solid #00ff87");
+			$('.oco').css('background-color',"#eafff5");
+			$('.oco').css('float',"left");
+			$('.oco').css('text-align',"center");
+			$(".oco").mouseover(function(){
+				$(this).css('background-color',"#fffee2")
+			})
+			$(".oco").mouseout(function(){
+				$('.oco').css('background-color',"#eafff5")
+			})
+
+			var dem = 0
+			$('.oco').click(function(){
+				if($(this).html()==''){
+					if(dem%2==0){
+						$(this).html("X");
+					}
+					else{
+						$(this).html("O");
+					}
+
+					dem++;
+				}
+				else{
+					alert("can not check this!")
+				}
+
+				
+			})
+
+			
+
+		})
+	</script>
+
+</head>
+
+<body>
+	
+<!-- 
+	<div class="banco">
+	</div>
+ -->
+
+<!-- <div class="doanvan"><p>Chào các bạn</p></div>
+<input class="so_a">
+<button>click me</button>
+	<script>
+		
+	$(document).ready(function(){
+		$("button").click(function(){
+			//$('.doanvan').html('Chào cả lớp');
+			var so_a = $('.so_a').val();
+			alert(so_a)
+		})
+		//var noidung = $('.doanvan').html('Chào cả lớp');
+		//alert(noidung);
+	})
+
+	</script> -->
+
+
+
+
+	<!-- Số a:<input type="text" id="so_a" placeholder="Nhập số a">
+	<br>
+	<br>
+	Số b: <input class="so_b" type="text" id="so_b" placeholder="Nhập số b" value="6" abc="5">
+	<br>
+	<br>
+	Phép tính: <input type="text" id="pheptinh" placeholder="Nhập phép tính">
+	<br>
+	<br>
+	<input type="button" id="tinh" value="Tính">
+	<br>
+	<br>
+	Kết quả:<input id="ketqua"> -->
+	<input type="button" id="tru" style="width: 40px" value="-">
+	<input type="text" id="soluong" style="width: 40px" value="1">
+	<input type="button" id="cong" style="width: 40px" value="+">
+	<script>
+	$(document).ready(function(){
+
+			$('#tru').click(function(){
+				var soluong = $('#soluong').val();
+				if(soluong >1){
+					$('#soluong').val(soluong-1)
+
+				}
+			})
+			$('#cong').click(function(){
+				var soluong = $('#soluong').val();
+				if(soluong <20){
+					$('#soluong').val(parseInt(soluong)+1)
+
+				}
+			})
+
+
+
+
+
+		// $('#tinh').click(function(){
+		// 	var tru = $('#so_a').val();
+		// 	var so_b = $('#so_b').removeClass('so_b');
+		// 	 $('#so_b').addClass('abc')
+		// 	//alert(so_b);
+
+
+
+
+		// 	// var pheptinh = $('#pheptinh').val();
+		// 	// var ketqua = 0;
+		// 	// if(pheptinh == "+"){
+		// 	// 	ketqua = parseInt(so_b)+parseInt(so_a);
+		// 	// }
+		// 	// else if(pheptinh == "-"){
+		// 	// 	ketqua = parseInt(so_a)-parseInt(so_b);
+		// 	// }
+		// 	// else if(pheptinh == "*"){
+		// 	// 	ketqua = parseInt(so_a)*parseInt(so_b);
+		// 	// }
+		// 	// else if(pheptinh == "/"){
+		// 	// 	if(so_b == 0){
+		// 	// 		alert('Số b khác 0')
+		// 	// 	}
+		// 	// 	else
+		// 	// 		ketqua = parseInt(so_a)/parseInt(so_b);
+		// 	// }
+		// 	// else{
+		// 	// 	alert('phép tính : + - * /');
+		// 	// }
+		// 	// $('#ketqua').val(ketqua);
+		// })
+	})
+	</script>
+</body>
+</html>

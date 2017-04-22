@@ -1,0 +1,22 @@
+.container{
+	width: 100%
+}
+.noidung{
+	height: 200px;
+	width: 28%;
+	background-color: #d2d4d8;
+	border:1px dotted #000;
+	padding:20px;
+	margin:10px ;
+	float: left;
+}
+.baitap{
+	width: 400px;
+	border: 1px solid black;
+	padding: 20px 5px;
+	border-radius: 10%
+}
+
+.baitap img{
+	float: left;
+}

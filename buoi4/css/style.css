@@ -1,0 +1,151 @@
+.co_anh{
+	top: 50px;
+	left: 50px;
+	position: fixed;
+
+}
+
+.co_vn{
+	position: absolute;
+	top:100px;
+	left: 100px;
+	z-index: 1
+}
+.co_thailan{
+	position: absolute;
+	top: 150px;
+	left: 150px
+}
+
+ 
+.menucha li{
+	position: relative;
+	float: left;
+	width: 120px;
+	list-style-type: none;
+	background-color: red;
+	color:#fff;
+	padding:20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-left: 1px solid #fff;
+	text-align: center; 
+	
+}
+.menucon{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: -60px
+}
+.menucon li{
+	display: none;
+	z-index: 10;
+	background-color: blue;
+	border-bottom: 1px solid #fff
+}
+
+.menucha li:hover .menucon li{
+	display: block;
+	
+} 
+
+/*.menucha{background:blue;
+border-left: 1px solid white;}
+.menucha li{position: relative;
+list-style: none;
+display: inline-block;
+padding: 15px;
+text-align: center;
+text-transform: uppercase;
+color:#ffffff;}
+
+.menucha li:hover .menucon {display:block;}
+.menucon {display: none; position: absolute; background:red;}*/
+
+
+body{
+	background-color:#eff3f7 
+}
+
+.container{
+	width: 1000px;
+	margin:auto;
+
+}
+.sanpham{
+	width: 30%;
+	margin: 5px;
+	background-color: #fff;
+	float: left;
+	height: 400px
+}
+
+.hinh, .mota{
+	float: left;
+	width: 50%;
+}
+.hinh img{
+	padding-left: 20px;
+	padding-top: 20px
+}
+.thongtin, .ten, .gia{
+	width: 100%
+}
+
+.name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.km{
+	color: red;
+	font-family: "Tahoma"
+}
+.ten{
+	font-size: 20px;
+	font-weight: bold;
+	padding:10px;
+}
+.gia{
+	font-size: 20px;
+	color: red;
+	padding:10px;
+}
+
+@media (max-width: 1000px) {
+
+	.container{
+		width: 800px
+	}
+}
+@media (max-width: 800px) {
+
+	.container{
+		width: 700px
+	}
+	.mota{
+		display: none;
+	}
+	.thongtin{
+		height: 250px
+	}
+	.hinh{
+		width: 100%;
+		float: none;
+	}
+	.hinh img {
+	    padding-left: none;
+	    padding-top: none;
+	    margin: auto;
+	    display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container{
+		width: 500px
+	}
+	.sanpham{
+		width: 40%;
+	}
+
+}
